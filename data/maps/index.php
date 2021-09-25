@@ -23,7 +23,7 @@
             }
             if(isset($_FILES['fileToUpload'])) {
               $errors= array();
-              $file_name = $dir."/".basename($_FILES['fileToUpload']['name']);
+              $file_name = $dir."/data.csv";
               $file_size = $_FILES['fileToUpload']['size'];
               $file_tmp = $_FILES['fileToUpload']['tmp_name'];
               $file_type = $_FILES['fileToUpload']['type'];
