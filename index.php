@@ -40,6 +40,13 @@
           <p>Heatmaps in particular would be able to visualize datasets that are available to healthcare providers for them to better help specific populations.</p>
         </div>
       </div>
+      <div class = "unit">
+        <img src="/img/champaign.jpeg" />
+        <div class="innerbox">
+          <h1>Implementation?</h1>
+          <p>This tool functions as a tool for healthcare providers. All that is necessary is to upload two CSV files: one with the data to analyze, and one with coordinates for a map. Thus tool has Python scripts for back-end data analysis to examine percentages and absolute statistics, and to either linearly or logarithmically develop a heat map.</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>

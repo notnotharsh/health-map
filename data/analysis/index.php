@@ -55,7 +55,7 @@
               copy(getcwd()."/../maps/champaign-county-townships.csv", $dir."/map.csv");
             }
             ?>
-            <h1> Target Map</h1>
+            <h1> People under Poverty Line</h1>
             <canvas id="targetcanvas" width="500" height="600" style="border:1px solid #d3d3d3;">Your browser does not support the canvas element.</canvas>
             <div id="targets" style="display: none;">
               <?php
@@ -75,6 +75,14 @@
               echo $code;
             ?>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="unit">
+        <img src="/img/champaign.jpeg">
+        <div class="innerbox">
+          <div>
+            <img src="/img/chambana.png" style="display: block; margin: auto"/>
           </div>
         </div>
       </div>
