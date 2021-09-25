@@ -29,10 +29,9 @@
               $file_type = $_FILES['fileToUpload']['type'];
               $file_ext = strtolower(end(explode('.', $file_name)));
               $extensions = array("csv");
-
+              echo "yeezys".basename($_FILES['fileToUpload']['name']);
               if (basename($_FILES['fileToUpload']['name']) == "") {
-                copy(getcwd()."/../poverty-status-champaign-county-townships.csv", $dir."/data.csv");
-                echo "<h1>Going with the default?</h1> <p>We see you didn't input a file. We'll use the default map file for your visualization <a href=\"/data/maps/champaign-county-townships.csv\">here</a>.</p> <form action=\"/data/analysis\" method=\"post\" enctype=\"multipart/form-data\"> <input type=\"hidden\" style=\"text-align-last: center;\" name=\"fileToUpload\" id=\"fileToUpload\"></input> <input type=\"submit\" style=\"color: #222222\" name=\"submit\"></input> </form> </div>";
+                rename(getcwd()."/../maps/champaign-county-townships.csv", $dir."/map.csv");
               } else {
                 if(in_array($file_ext,$extensions) === false) {
                   $errors[] = "That's not a CSV! Try again <a href=\"/data/\">here</a>?";
@@ -43,8 +42,8 @@
                 }
 
                 if (empty($errors) == true) {
-                  if (move_uploaded_file($file_tmp, $dir."/data.csv") == true) {
-                    echo "<h1>Nice! Input map CSV file:</h1> <p>This is the data set that provides a map for the heatmap. If you don't input anything, no worries, we'll use our own file <a href=\"/data/maps/poverty-status-champaign-county-townships-map.csv\">here</a>.</p> <form action=\"/data/analysis\" method=\"post\" enctype=\"multipart/form-data\"> <input type=\"file\" style=\"text-align-last: center;\" name=\"fileToUpload\" id=\"fileToUpload\"></input> <input type=\"submit\" style=\"color: #222222\" name=\"submit\"></input> </form> </div>";
+                  if (move_uploaded_file($file_tmp, $dir."/map.csv") == true) {
+                    echo "";
                   } else {
                     echo $file_tmp;
                   }
@@ -53,8 +52,7 @@
                 }
               }
             } else {
-              copy(getcwd()."/../poverty-status-champaign-county-townships.csv", $dir."/data.csv");
-              echo "<h1>Going with the default?</h1> <p>We see you didn't input a file. We'll use the default map file for your visualization <a href=\"/data/maps/champaign-county-townships.csv\">here</a>.</p> <form action=\"/data/analysis\" method=\"post\" enctype=\"multipart/form-data\"> <input type=\"hidden\" style=\"text-align-last: center;\" name=\"fileToUpload\" id=\"fileToUpload\"></input> <input type=\"submit\" style=\"color: #222222\" name=\"submit\"></input> </form> </div>";
+              copy(getcwd()."/../maps/champaign-county-townships.csv", $dir."/map.csv");
             }
             ?>
           </div>
