@@ -4,7 +4,7 @@ import math
 POPULATION_INDEX = 1
 TARGET_INDEX = 3
 
-with open('/uploads/data.csv') as csv_file:
+with open('../../uploads/data.csv') as csv_file:
     def zero_to_one_lin(arr):
         minl = min(arr)
         maxl = max(arr)
@@ -16,7 +16,7 @@ with open('/uploads/data.csv') as csv_file:
     def prob_to_color(arr):
         green = [255, 255, 0]
         multiplier = [0, -255, 0]
-        return [tuple([int(green[0] + multiplier[0] * i), int(green[1] + multiplier[1] * i), int(green[2] + multiplier[2]) * i]) for i in arr]
+        return [([int(green[0] + multiplier[0] * i), int(green[1] + multiplier[1] * i), int(green[2] + multiplier[2]) * i]) for i in arr]
     csv_reader = csv.reader(csv_file, delimiter=',')
     line_count = 0
     names = []
@@ -32,4 +32,3 @@ with open('/uploads/data.csv') as csv_file:
             line_count += 1
     targets = [int(populations[i] * percentages[i]) for i in range(0, len(populations))]
     print(prob_to_color(zero_to_one_lin(percentages)))
-    print(prob_to_color(zero_to_one_log(targets)))

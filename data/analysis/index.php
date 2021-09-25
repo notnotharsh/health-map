@@ -55,9 +55,49 @@
               copy(getcwd()."/../maps/champaign-county-townships.csv", $dir."/map.csv");
             }
             ?>
+            <h1> Target Map</h1>
+            <canvas id="targetcanvas" width="500" height="600" style="border:1px solid #d3d3d3;">Your browser does not support the canvas element.</canvas>
+            <div id="targets" style="display: none;">
+              <?php
+              $code = shell_exec("python3 targets.py");
+              echo $code;
+            ?>
+            </div>
+            <div id="percentages" style="display: none;">
+              <?php
+              $code = shell_exec("python3 percentages.py");
+              echo $code;
+            ?>
+            </div>
+            <div id="map" style="display: none;">
+              <?php
+              $code = shell_exec("python3 map.py");
+              echo $code;
+            ?>
+            </div>
           </div>
         </div>
       </div>
+      <script>
+        var targetcanvas = document.getElementById("targetcanvas");
+        // var percentagecanvas = document.getElementById("percentagecanvas");
+        var ctx = targetcanvas.getContext("2d");
+        // var ctp = percentagecanvas.getContext("2d");
+        map = (JSON.parse(document.getElementById("map").innerHTML));
+        targets = (JSON.parse(document.getElementById("targets").innerHTML));
+        percentages = (JSON.parse(document.getElementById("percentages").innerHTML));
+        for (var i = 0; i < map.length; i++) {
+          ctx.fillStyle = "rgb(" + targets[i][0] + ", " + targets[i][1] + ", " + targets[i][2] + ")";
+          ctx.beginPath();
+          ctx.moveTo(map[i][0][0],map[i][0][1]);
+          for (var j = 1; j < map[i].length; j++) {
+            ctx.lineTo(map[i][j][0],map[i][j][1]);
+          }
+          ctx.closePath();
+          ctx.fill();
+        }
+        ctx.stroke();
+      </script>
     </div>
   </body>
 </html>
