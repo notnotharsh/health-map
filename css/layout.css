@@ -30,23 +30,18 @@ div.unit {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 div.unit img {
-  position: absolute;
-  z-index: 1;
-  align-self: center;
-}
-
-div.unit img.wide {
-  height: 100%;
-}
-
-div.unit img.high {
-  width: 100%;
+  display: none;
 }
 
 div.innerbox {
+  width: 50%;
   z-index: 2;
   padding: 16px;
 }

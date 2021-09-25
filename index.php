@@ -6,19 +6,20 @@
     <link rel="stylesheet" href="css/layout.css" type="text/css" />
     <script type="text/javascript" src="js/script.js"></script>
   </head>
-  <body onload="callImageResize()" onresize="callImageResize()">
+  <body onload="homeImages(); checkWidth();" onresize="checkWidth();">
     <header>
       <h1>HealthMap</h1>
     </header>
     <div id="content">
       <div class="unit">
-        <img src="img/brain.jpeg" />
+        <img src="img/champaign.jpeg" />
         <div class="innerbox">
-          <h1>so?</h1>
-          <p>this is a thing</p>
+          <h1>Champaign County makes it possible for us to live and learn.</h1>
+          <p>So let's see if we can make it a healthier place!</p>
         </div>
       </div>
       <div class="unit">
+        <img src="img/tower.jpeg" />
         <div class="innerbox">
           <h1>so?</h1>
           <p>this is a thing</p>
