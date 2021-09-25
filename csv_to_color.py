@@ -4,7 +4,7 @@ import math
 POPULATION_INDEX = 1
 TARGET_INDEX = 3
 
-with open('uploads/data.csv') as csv_file:
+with open('/uploads/data.csv') as csv_file:
     def zero_to_one_lin(arr):
         minl = min(arr)
         maxl = max(arr)
