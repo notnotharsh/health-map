@@ -15,8 +15,8 @@
       <div class="unit">
         <img src="/img/data.jpeg" />
         <div class="innerbox">
-          <h1>I hope you'll like this demonstration.</h1>
-          <p>Scroll down to see it in action!</p>
+          <h1>Here we go!</h1>
+          <p>Upload your CSV files to generate a heat map!</p>
         </div>
       </div>
       <div class="unit">
