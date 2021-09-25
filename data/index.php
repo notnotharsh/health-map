@@ -13,20 +13,20 @@
     </header>
     <div id="content">
       <div class="unit">
-        <img src="img/data.jpeg" />
+        <img src="/img/data.jpeg" />
         <div class="innerbox">
           <h1>I hope you'll like this demonstration.</h1>
           <p>Scroll down to see it in action!</p>
         </div>
       </div>
       <div class="unit">
-        <img src="img/data.jpeg" />
+        <img src="/img/data.jpeg" />
         <div class="innerbox">
-          <h1>Input csv file:</h1>
+          <h1>Input CSV file:</h1>
           <p>This is the data set to visualize. If you don't input anything, no worries, we'll use our own file <a href="/data/poverty-status-champaign-county-townships.csv">here</a>.</p>
-          <form action="/data/maps" method="post">
-            <input type="file" style="text-align-last: center;"></input>
-            <input type="submit" style="color: #222222"></input>
+          <form action="/data/maps" method="post" enctype="multipart/form-data">
+            <input type="file" style="text-align-last: center;" name="fileToUpload" id="fileToUpload"></input>
+            <input type="submit" style="color: #222222" name="submit"></input>
           </form>
         </div>
       </div>

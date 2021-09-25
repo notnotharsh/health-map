@@ -13,14 +13,14 @@
     </header>
     <div id="content">
       <div class="unit">
-        <img src="img/champaign.jpeg" />
+        <img src="/img/champaign.jpeg" />
         <div class="innerbox">
           <h1>Champaign County makes it possible for us to live and learn.</h1>
           <p>So let's see if we can make it a healthier place!</p>
         </div>
       </div>
       <div class="unit">
-        <img src="img/tower.jpeg" />
+        <img src="/img/tower.jpeg" />
         <div class="innerbox">
           <h1>so?</h1>
           <p>this is a thing</p>
