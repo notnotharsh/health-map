@@ -20,10 +20,24 @@
         </div>
       </div>
       <div class="unit">
-        <img src="/img/tower.jpeg" />
+        <img src="/img/code.jpeg" />
         <div class="innerbox">
-          <h1>so?</h1>
-          <p>this is a thing</p>
+          <h1>Data is important.</h1>
+          <p>But is it accessible? Healthcare providers see it buried under long lists and tables.</p>
+        </div>
+      </div>
+      <div class = "unit">
+        <img src="/img/thing.jpeg" />
+        <div class="innerbox">
+          <h1>Healthcare workers that work with data agree:</h1>
+          <p>it absolutely needs to be accessible. A visualizer would do some good, but those already exist. Outreach purposes are fantastic (giving resources to certain populations, but which ones?)</p>
+        </div>
+      </div>
+      <div class = "unit">
+        <img src="/img/disease.jpeg" />
+        <div class="innerbox">
+          <h1>What about mapping technologies?</h1>
+          <p>Heatmaps in particular would be able to visualize datasets that are available to healthcare providers for them to better help specific populations.</p>
         </div>
       </div>
     </div>
