@@ -23,7 +23,7 @@
             }
             if(isset($_FILES['fileToUpload'])) {
               $errors= array();
-              $file_name = $dir."/data.csv";
+              $file_name = $dir."/".basename($_FILES['fileToUpload']['name']);
               $file_size = $_FILES['fileToUpload']['size'];
               $file_tmp = $_FILES['fileToUpload']['tmp_name'];
               $file_type = $_FILES['fileToUpload']['type'];
@@ -39,7 +39,7 @@
               }
 
               if (empty($errors) == true) {
-                if (move_uploaded_file($file_tmp, $file_name) == true) {
+                if (move_uploaded_file($file_tmp, $dir."/data.csv") == true) {
                   echo "<h1>Nice! Input map CSV file:</h1> <p>This is the data set that provides a map for the heatmap. If you don't input anything, no worries, we'll use our own file <a href=\"/data/maps/poverty-status-champaign-county-townships-map.csv\">here</a>.</p> <form action=\"/data/analysis\" method=\"post\" enctype=\"multipart/form-data\"> <input type=\"file\" style=\"text-align-last: center;\" name=\"fileToUpload\" id=\"fileToUpload\"></input> <input type=\"submit\" style=\"color: #222222\" name=\"submit\"></input> </form> </div>";
                 } else {
                   echo $file_tmp;
