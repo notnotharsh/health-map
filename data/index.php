@@ -13,17 +13,21 @@
     </header>
     <div id="content">
       <div class="unit">
-        <img src="img/champaign.jpeg" />
+        <img src="img/data.jpeg" />
         <div class="innerbox">
-          <h1>Champaign County makes it possible for us to live and learn.</h1>
-          <p>So let's see if we can make it a healthier place!</p>
+          <h1>I hope you'll like this demonstration.</h1>
+          <p>Scroll down to see it in action!</p>
         </div>
       </div>
       <div class="unit">
-        <img src="img/tower.jpeg" />
+        <img src="img/data.jpeg" />
         <div class="innerbox">
-          <h1>so?</h1>
-          <p>this is a thing</p>
+          <h1>Input csv file:</h1>
+          <p>This is the data set to visualize. If you don't input anything, no worries, we'll use our own file <a href="/data/poverty-status-champaign-county-townships.csv">here</a>.</p>
+          <form action="/data/maps" method="post">
+            <input type="file" style="text-align-last: center;"></input>
+            <input type="submit" style="color: #222222"></input>
+          </form>
         </div>
       </div>
     </div>

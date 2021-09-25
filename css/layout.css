@@ -4,6 +4,7 @@ body {
 
 header * {
   display: inline-block;
+  width: 40%;
   text-align: center;
 }
 header {
@@ -44,4 +45,13 @@ div.innerbox {
   width: 50%;
   z-index: 2;
   padding: 16px;
+}
+
+div.innerbox > * {
+  display: block;
+}
+
+div.innerbox input {
+  display: block;
+  margin: 10px auto;
 }

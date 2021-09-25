@@ -28,3 +28,8 @@ h1 {
 ::-webkit-scrollbar-thumb {
     background: #dddddd;
 }​
+
+div.innerbox input {
+  text-align: center;
+  text-align-last: center;
+}
