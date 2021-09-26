@@ -1,7 +1,7 @@
 # Champaign County Health Maps
 
 ## Data is not accessible. What can we do?
-Sites such as [this one](https://ccrpc.org/data) have data on different health and economic indicators for different regions inside Champaign County. This data, however, is inaccessible to the general public and requires some visualization to raise awareness.
+Sites such as [this one](https://data.ccrpc.org/) have data on different health and economic indicators for different regions inside Champaign County. This data, however, is inaccessible to the general public and requires some visualization to raise awareness.
 
 ## Heatmaps!
 These maps can massively impact individual's understanding of economic and health indicators among geographic features.
